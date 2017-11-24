@@ -1,11 +1,7 @@
-// Place all the styles related to the Top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 header {
   width: 100%;
   background-color: #2c3e50;
-  height: 80px;
+  height: 54px;
 }
 
 /*
@@ -31,8 +27,8 @@ header ul:after {
   display: block;
   clear: both;
 }
-
 */
+
 
 .navbar-default {
     border: 0;
@@ -65,8 +61,6 @@ header ul:after {
   }
 }
 
-
-/*
 @media (max-width: 767px) {
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #ccc;
@@ -83,15 +77,16 @@ header ul:after {
   }
 }
 
-*/
-
 
 
 .main-header {
   padding-bottom: 15%;
   width: 100%;
   background-size: cover;
-  background-image:  image-url("TweetanShoutSingle.png");
+/*
+background-image: url("images-master/header.jpg");
+*/
+  background-image:  image-url("header.jpg");
   background-attachment: fixed;
 }
 
@@ -102,13 +97,6 @@ header ul:after {
   padding-top: 15%;
 }
 
-.flash {
-  margin: 0 auto;
-  background-color: black;
-  color: #333;
-;
-}
-
 .about {
   background-color: white;
   color: #333;
@@ -117,10 +105,23 @@ header ul:after {
 
 .function {
   background-color: #e9e9e9;
-  padding: 10px;
-  padding-bottom: 60px;
+  padding: 80px;
+  padding-bottom: 185px;
 }
 
+/*
+.function-images {
+  width: 100%;
+  display: table;
+  margin-top: 60px;
+  table-layout: fixed;
+}
+
+.function-image {
+  display: table-cell;
+  width: 100%;
+}
+*/
 
 
 footer {
@@ -142,4 +143,33 @@ html {
 
 body {
   text-align: center;
+}
+
+
+.page-top-btn {
+  display: none;
+  border-radius: 50px;
+  background: #336699;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 20;
+  a {
+    display: block;
+    color: white;
+    line-height: 60px;
+    text-decoration: none;
+  }
+  &:hover {
+  opacity: 0.7;
+  }
+}
+
+.flash {
+  color: white;
+  padding-top: 10px;
 }

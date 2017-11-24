@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  devise_for :users
   get 'top/index'
 
   resources :topics, only: [:index, :new, :create, :edit, :update, :destroy] 
