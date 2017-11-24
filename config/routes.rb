@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'top/index'
 
-  resources :topics, only: [:index, :new, :create, :edit, :destroy] 
+  resources :topics, only: [:index, :new, :create, :edit, :update, :destroy] 
   
   
    root 'top#index'
