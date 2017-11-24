@@ -1,0 +1,13 @@
+<p><%= notice %></p>
+
+一覧
+
+<% @topics.each do |topic| %>
+  <p>タイトル:<%= topic.title %></p>
+  <p>本文:<%= topic.content %></p>
+  <%= link_to "編集", edit_topic_path(topic.id) %>
+  <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？' }%>
+
+<% end %>
+
+<p><%= link_to "Make Topic", new_topic_path %></p>
