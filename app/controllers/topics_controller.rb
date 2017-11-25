@@ -15,10 +15,11 @@ before_action :set_topic, only: [:edit, :update, :destroy]
  def create
   
   @topic = Topic.new(topics_params)
-  @blog.user_id = current_user.id
+  @topic.user_id = current_user.id
    
   if @topic.save
    redirect_to topics_path, notice: "Topicsを作成しました！"
+   NoticeMailer.sendmail_topic(@topic).deliver
   else
    render 'new'
   end
