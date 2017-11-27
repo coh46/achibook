@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+
  devise_for :users, controllers: {
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
 #  post :confirm, on: :collection
  end
   
+  resources :users, only: [:index, :show]
+  resources :relationships, only: [:create, :destroy]
   
 #resources :topics do
 #  resources :comments
