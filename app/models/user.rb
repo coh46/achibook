@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :omniauthable
          
+         mount_uploader :avatar, AvatarUploader #deviseの設定配下に追記
+         
          has_many :topics
          
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
@@ -46,5 +48,16 @@ class User < ActiveRecord::Base
   def self.create_unique_string
     SecureRandom.uuid
   end
+
+
+  def update_with_password(params, *options)
+    if provider.blank?
+      super
+    else
+      params.delete :current_password
+      update_without_password(params, *options)
+    end
+  end
+
 
 end
