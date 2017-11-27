@@ -8,6 +8,9 @@
 <% @topics.each do |topic| %>
 <div class="row">
   <h4><strong><%= topic.title %></p></strong></h4>
+  <p class="thumbnail"><%= profile_img(topic.user)%></p>
+  <p><%= topic.user.name %>が投稿しました</p>
+  <p><%= image_tag topic.picture %></p>
   <p><%= topic.content %></p>
   <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-sm btn-success' %>
   <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-sm btn-danger' %>
