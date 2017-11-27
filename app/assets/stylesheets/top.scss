@@ -177,16 +177,22 @@ body {
 .row {
   background-color: white;
   margin: 10px;
-  padding: 10px;
-  border-radius: 5px
-  
+  padding: 10%;
+  border-radius: 5px;
+  word-wrap: break-word;
 }
 
 .thumbnail{
     border-style: none;
+    margin: 0px;
   img{
-    border-radius: 20px;
-    height: 40px;
-    width: 40px;
+    border-radius: 50%;
+    height: 40px
+
 }
+}
+
+
+.footer_txt
+{
 }
