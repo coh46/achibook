@@ -3,7 +3,7 @@
 
 <p><%= notice %></p>
 
-<%= link_to "作成", new_topic_path, class: 'btn btn-default' %>
+<%= link_to "投稿する", new_topic_path, class: 'btn btn-default' %>
 
 <% @topics.each do |topic| %>
 <div class="row">
@@ -14,10 +14,8 @@
   <p><%= topic.content %></p>
   <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-sm btn-success' %>
   <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-sm btn-danger' %>
-  <br>
-  <%= link_to topic_path(topic) do %>
-  コメントする
-　<% end %>
+  <hr>
+　<%= link_to image_tag(asset_path "comment.png"), topic_path(topic) %>
 </div>
 <% end %>
 　</div>

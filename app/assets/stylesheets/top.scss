@@ -46,9 +46,9 @@ header ul:after {
     }
   }
   .navbar-nav > li > a {
-    color: #ccc;
+    color: white;
     &:hover, &:focus {
-      color: white;
+      color: yellow;
     }
   }
   .navbar-nav > .open > a {
@@ -80,7 +80,7 @@ header ul:after {
 
 
 .main-header {
-  padding-bottom: 15%;
+  padding-bottom: 5%;
   width: 100%;
   background-size: cover;
 /*
@@ -93,8 +93,8 @@ background-image: url("images-master/header.jpg");
 .main-header img {
   display: block;
   margin: 0 auto;
-  width: 25%;
-  padding-top: 15%;
+  width: 100%;
+  padding-top: 0%;
 }
 
 .about {
@@ -170,7 +170,7 @@ body {
 }
 
 .flash {
-  color: white;
+  color: black;
   padding-top: 10px;
 }
 
@@ -190,9 +190,4 @@ body {
     height: 40px
 
 }
-}
-
-
-.footer_txt
-{
 }
