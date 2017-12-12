@@ -31,9 +31,9 @@ class CommentsController < ApplicationController
   
   def update
     @comment = Comment.find(params[:id])
-    @comment.update(comments_params)
+#    @comment.update(comments_params)
   
-    if @topic.update(domments_params)
+    if @comment.update(comments_params)
        redirect_to topics_path, notice: "コメントを更新しました！"
     else
      render 'edit'
@@ -41,8 +41,6 @@ class CommentsController < ApplicationController
     
     
   end
-
-
 
   private
     def comment_params
