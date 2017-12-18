@@ -1,3 +1,7 @@
+ <div class="container">
+  <div class="row">   
+ 
+
 <%= form_for([topic, comment], remote: true) do |f| %>
   <%= f.hidden_field :topic_id %>
   <div class="field">
@@ -7,3 +11,6 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>
+</div>
