@@ -1,22 +1,27 @@
+
 <h2>友達かも</h2>
 
-
+ <div class="container">
+  <div class="row">   
 
    <% @users.each do |user| %>
     <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
      <% if user.id != current_user.id %>
-
- 
      　<div class="item">
-     　<p class="thumbnail"><%= profile_img(user)%></p>
+     　<p class="thumbnail"> <%= profile_img(user)%></p>
        <p> <%= user.name %></p>
        <p> <%= link_to "詳細情報", user_path(user.id), class: 'btn btn-default btn-sm btn-success' %></p>
        <p> <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post', class: 'btn btn-default btn-sm btn-success' %></p>
        
-        <p> <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %></p>
     </div>
       <% end %>
     </div>
     
    <% end %>
 </div>
+</div>
+</div>
+
+<%= link_to "Topic一覧へ", topics_path %>
+<br><br><br><br><br>
+

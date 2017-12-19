@@ -11,7 +11,7 @@ m=n+2
 20.times do |n|
   email = Faker::Internet.email
   password = "password"
-  name = "dove"
+  name = Faker::Japanese::Name.name
   User.create!(email: email,
                name: name,
                password: password,

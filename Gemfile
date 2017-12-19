@@ -86,3 +86,5 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
 end
+
+gem 'faker-japanese'
