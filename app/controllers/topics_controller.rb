@@ -60,7 +60,7 @@ before_action :set_topic, only: [:edit, :update, :destroy, :show]
 
   private
     def topics_params
-      params.require(:topic).permit(:title, :content, :picture)
+      params.require(:topic).permit(:title, :content, :picture, :user_id)
     end
     
     def set_topic
