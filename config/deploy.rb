@@ -1,16 +1,16 @@
 lock '3.6.0'
 
 # デプロイするアプリケーション名
-set :application, 'doppelbock'
+set :application, 'achibook'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/masashi-hirosaki/doppelbock'
+set :repo_url, 'https://github.com/coh46/achibook'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/doppelbock'
+set :deploy_to, '/var/www/achibook'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
