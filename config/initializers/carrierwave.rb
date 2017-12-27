@@ -12,10 +12,10 @@ CarrierWave.configure do |config|
 
   case Rails.env
     when 'production'
-      config.fog_directory = 'doppelbock-production'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/doppelbock-production'
+      config.fog_directory = 'achibookproduction'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/achibookproduction'
     when 'development'
-      config.fog_directory = 'doppelbock-development'
-      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/doppelbock-development'
+      config.fog_directory = 'achibookdevelopment'
+      config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/achibookdevelopment'
   end
 end
