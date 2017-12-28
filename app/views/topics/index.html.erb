@@ -17,9 +17,9 @@
   <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-sm btn-danger' %>
   <% else %>
   <% end %>
- 
+
   <hr>
-　<%= link_to image_tag(asset_path "comment.png"), topic_path(topic) %>
+　<%= link_to "コメントする", topic_path(topic) %>
 </div>
 <% end %>
 　</div>
