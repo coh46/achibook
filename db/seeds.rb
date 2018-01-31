@@ -12,31 +12,46 @@ m=n+2
   email = Faker::Internet.email
   password = "password"
   name = Faker::Japanese::Name.name
-  User.create!(email: email,
+  user = User.create!(email: email,
                name: name,
                password: password,
                password_confirmation: password,
                uid: n+2,
                provider: m+1,
                )
+
+  topic = Topic.create(
+          title: "あああ",
+          content: "えええ",
+          user_id: user.id
+          )
+
+  comment = Comment.create(
+            content: "おおお",
+            user_id: user.id,
+            topic_id: topic.id
+            )
+
 end
 
-n = 1
-while n <= 20
-  Topic.create(
-    title: "あああ",
-    content: "えええ",
-    user_id: n
-  )
-  n = n + 1
-end
-
-n = 1
-while n <= 20
-  Comment.create(
-    content: "おおお",
-    user_id: n,
-    topic_id: n
-  )
-  n = n + 1
-end
+# n = 1
+# while n <= 20
+#   Topic.create(
+#     title: "あああ",
+#     content: "えええ",
+#     user_id: n
+#   )
+#   n = n + 1
+#
+#
+# end
+#
+# n = 1
+# while n <= 20
+#   Comment.create(
+#     content: "おおお",
+#     user_id: n,
+#     topic_id: n
+#   )
+#   n = n + 1
+# end
