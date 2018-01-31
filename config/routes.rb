@@ -20,7 +20,12 @@ Rails.application.routes.draw do
   resources :conversations do
   resources :messages
 end
-  
+
+
+if Rails.env.development?
+  mount LetterOpenerWeb::Engine, at: "/letter_opener"
+end
+
 #resources :topics do
 #  resources :comments
 #  post :confirm, on: :collection
