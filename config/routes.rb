@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
 
 
 
@@ -12,11 +12,11 @@ Rails.application.routes.draw do
     resources :comments
 #  post :confirm, on: :collection
  end
- 
-  
+
+
   resources :users, only: [:index, :show]
   resources :relationships, only: [:create, :destroy]
-  
+
   resources :conversations do
   resources :messages
 end
@@ -25,14 +25,12 @@ end
 #  resources :comments
 #  post :confirm, on: :collection
 # end
-  
-if Rails.env.development?
-  mount LetterOpenerWeb::Engine, at: "/letter_opener"
-end
-  
-  
+
+
+
+
    root 'top#index'
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
